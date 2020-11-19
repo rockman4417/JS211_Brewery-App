@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Monoton&display=swap" rel="stylesheet">
+  <title>BREWERY APP</title>
+</head>
+<body>
+
+    <h1>BREWERY APP</h1>
+    <h2>FIND LOCAL BREWERIES</h2>
+    <div class="header">
+
+<form>
+    <label for="states">Choose a State:</label>
+    <select name="states" id="states">
+    </select>
+    <br><br>
+    
+  </form>
+  <form>
+    <label for="types">Choose a Type of Brewery:</label>
+    <select name="types" id="types">
+    </select>
+    <br><br>
+    
+  </form>
+  <button class="glow-on-hover"id="yo"onclick="submitButton()">SHOW ME BREWERIES!</button>
+  <button class="glow-on-hover"id="yo"onclick="nearMeButton()">NEAR ME</button>
+  
+  
+    </div>
+  
+    
+        <div class="main">
+            <ul id='all-posts'></ul>
+          </div>
+    
+  <script type='text/javascript'src="http://maps.googleapis.com/maps/api/js"></script>
+  <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>

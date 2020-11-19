@@ -1,0 +1,143 @@
+body {
+  background-image: url(Craft-Breweries-near-Me.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Monoton", cursive;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.brewery-div {
+  width: 600px;
+  height: 300px;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 5px;
+  font-weight: 700;
+  font-size: 150%;
+  box-shadow: 10px 5px 5px rgb(233, 227, 227);
+  margin: 10px;
+  background: rgb(233, 229, 229);
+  color: black;
+  font-family: "Luckiest Guy", cursive;
+  line-height: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  font-size: 150%;
+}
+
+h1 {
+  font-size: 350%;
+}
+
+h2 {
+  font-size: 250%;
+  font-family: "Luckiest Guy", cursive;
+}
+
+.like-button {
+  width: 75px;
+  height: 75px;
+  border: 1px solid black;
+  border-radius: 50%;
+  font-size: 250%;
+}
+
+.filled-heart {
+  color: pink;
+}
+
+.fa-heart {
+  width: 25px;
+  height: 25px;
+}
+
+.glow-on-hover {
+  width: 200px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 125%;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
