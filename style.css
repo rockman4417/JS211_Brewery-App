@@ -8,6 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Monoton", cursive;
+  text-shadow: 2px 2px #6b6666;
 }
 
 .main {
@@ -15,22 +16,36 @@ body {
   flex-wrap: wrap;
 }
 
+#button-container-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 100px;
+}
+
 .brewery-div {
-  width: 600px;
+  width: 700px;
   height: 300px;
   border: 2px solid rgb(0, 0, 0);
   padding: 5px;
   font-weight: 700;
   font-size: 150%;
-  box-shadow: 10px 5px 5px rgb(233, 227, 227);
+  box-shadow: rgb(233, 227, 227) 0px 5px 15px;
   margin: 10px;
-  background: rgb(233, 229, 229);
+  background: rgb(230, 219, 219);
   color: black;
   font-family: "Luckiest Guy", cursive;
   line-height: 2;
   display: flex;
   justify-content: center;
   align-items: center;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+}
+
+.brewery-p {
+  margin-left: 10px;
 }
 
 label {
@@ -54,13 +69,12 @@ h2 {
   font-size: 250%;
 }
 
-.filled-heart {
-  color: pink;
+.fas {
+  color: rgb(223, 35, 67);
 }
 
 .fa-heart {
-  width: 25px;
-  height: 25px;
+  margin: 20px;
 }
 
 .glow-on-hover {
@@ -76,6 +90,7 @@ h2 {
   border-radius: 10px;
   font-family: "Luckiest Guy", cursive;
   font-size: 125%;
+  margin: 5px;
 }
 
 .glow-on-hover:before {

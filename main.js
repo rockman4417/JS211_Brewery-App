@@ -2,7 +2,6 @@ let arrayOfBreweries = []
 let arrayOfStates = ["Alaska",
                   "Alabama",
                   "Arkansas",
-                  "American Samoa",
                   "Arizona",
                   "California",
                   "Colorado",
@@ -11,7 +10,6 @@ let arrayOfStates = ["Alaska",
                   "Delaware",
                   "Florida",
                   "Georgia",
-                  "Guam",
                   "Hawaii",
                   "Iowa",
                   "Idaho",
@@ -29,7 +27,7 @@ let arrayOfStates = ["Alaska",
                   "Mississippi",
                   "Montana",
                   "North Carolina",
-                  " North Dakota",
+                  "North Dakota",
                   "Nebraska",
                   "New Hampshire",
                   "New Jersey",
@@ -48,7 +46,6 @@ let arrayOfStates = ["Alaska",
                   "Texas",
                   "Utah",
                   "Virginia",
-                  "Virgin Islands",
                   "Vermont",
                   "Washington",
                   "Wisconsin",
@@ -68,7 +65,7 @@ window.onload = function() {
 // This function is going to make a fetch request to the URL inside its parameter brackets (). Then it will turn the response (data it's getting back), saved here as res. The res.json will not be saved as posts and saved into the variable, arrayOfPosts
 const getUsers = () => {
     
-        fetch('https://api.openbrewerydb.org/breweries?by_state=ohio')
+        fetch('https://api.openbrewerydb.org/breweries')
     .then(res => res.json())
     .then(breweries => arrayOfBreweries = breweries)
     
@@ -88,6 +85,8 @@ const displayBreweries = () => {
   removeAllChildNodes(allPosts)
   arrayOfBreweries.map((brewery, index) => {
     const div = document.createElement('div')
+    const p = document.createElement('p')
+    p.classList.add('brewery-p')
     div.classList.add("brewery-div")
     // let img = new Image()
     // const bar = document.createElement('div')
@@ -101,6 +100,7 @@ const displayBreweries = () => {
     const i = document.createElement('i')
     i.classList.add("far")
     i.classList.add("fa-heart")
+    i.classList.add("fa-2x")
     i.addEventListener('click', function() {heartLike(this)} )
 
     div.appendChild(i)
@@ -108,7 +108,9 @@ const displayBreweries = () => {
     //     showInfoButton.addEventListener('click', function() {showInfo(user, index)} )
         // div.appendChild(bar)
         // div.appendChild(img)
-        div.appendChild(text)
+
+        p.appendChild(text)
+        div.appendChild(p)
     // div.appendChild(showInfoButton)
     div.appendChild(i)
     allPosts.append(div)
@@ -227,6 +229,6 @@ function getAddress (latitude, longitude) {
 };
 
 const heartLike = (x) => {
-    x.classList.toggle("filled-heart");
+    x.classList.toggle("fas");
   }
 
